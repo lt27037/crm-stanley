@@ -13,6 +13,7 @@ module.exports = {
   },
   plugins: ['react'],
   rules: {
+    'comma-dangle': 0,
     'arrow-body-style': 0,
     'linebreak-style': 0,
     'import/extensions': 'off',

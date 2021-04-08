@@ -5,7 +5,7 @@ import '../styles/Home.scss';
 const Home = () => {
   return (
     <div>
-      HomePage
+      Home
     </div>
   );
 };

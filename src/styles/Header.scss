@@ -1,0 +1,30 @@
+@import 'variables';
+
+.header{
+  @include elementFlex(row, space-between, center);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 36px 6% 0 6%;
+  &__wrapper{
+    @include elementFlex(row, space-around, center);
+    width: auto;
+    height: 100%;
+  }
+  &__menu{
+    margin-left: 5rem;
+    &__list{
+      @include elementFlex(row, space-between, center);
+      list-style: none;
+    }
+    &__listItem{
+      margin: 0 1.5rem;
+      a{
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: $fontColor;  
+      }
+    }
+  }
+}
