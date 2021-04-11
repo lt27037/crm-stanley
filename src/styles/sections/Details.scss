@@ -1,0 +1,7 @@
+@import '../variables';
+
+.details{
+  width: 100%;
+  min-height: 200vh;
+  background-image: linear-gradient(to bottom, #fff 5%, $lightBgc 95%);
+}
