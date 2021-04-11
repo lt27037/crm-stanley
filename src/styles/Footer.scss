@@ -13,6 +13,8 @@
     @include selfPosition(start, center);
     grid-row: 1;
     grid-column: 1;
+    width: 131px;
+    height: 32px;
   }
   &__copyright{
     @include selfPosition(start, center);

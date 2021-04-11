@@ -1,0 +1,26 @@
+@import 'variables';
+
+.discoverItem{
+  @include elementFlex(row, flex-start, baseline);
+  width: 100%;
+  &__icon{
+    @include elementFlex(row, center, center);
+    width: 84px;
+    height: 84px;
+    border-radius: 8px;
+    background-color: $blueBgc;
+    margin-right: 24px;
+  }
+  &__wrapper{
+    max-width: 200px;
+  }
+  &__title{
+    font-size: 18px;
+    font-weight: 800;
+  }
+  &__content{
+    font-size: 16px;
+    font-weight: 600;
+    max-width: 200px;
+  }
+}

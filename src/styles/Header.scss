@@ -7,6 +7,10 @@
   top: 0;
   width: 100%;
   padding: 36px 10% 0 10%;
+  &__logo{
+    width: 131px;
+    height: 32px;
+  }
   &__wrapper{
     @include elementFlex(row, space-around, center);
     width: auto;

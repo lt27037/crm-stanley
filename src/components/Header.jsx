@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 import Button from './Button';
-import Logo from '../images/logo-desktop.png';
+import { ReactComponent as Logo } from '../images/logo/logo-desktop.svg';
 
 import '../styles/Header.scss';
 
@@ -10,11 +10,7 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header__wrapper">
-        <img
-          src={Logo}
-          alt="Logo"
-          className="header__logo"
-        />
+        <Logo className="header__logo" />
         <nav className="header__menu">
           <ul className="header__menu__list">
             <li className="header__menu__listItem">

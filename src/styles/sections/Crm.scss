@@ -1,0 +1,164 @@
+@import '../variables';
+
+.crm{
+  width: 100%;
+  min-height: 80vh;
+  grid-column: 2;
+  grid-row: 1;
+  padding: 50px 10%;
+  display: grid;
+  column-gap: 100px;
+  grid-template-columns: repeat(2, 1fr);
+  &__wrapper{
+    @include elementFlex(column, flex-start, flex-start);
+    width: 100%;
+    height: 100%;
+    position: relative;
+  } 
+  &__title{
+    font-size: 36px;
+    line-height: 54px;
+    font-weight: 800;
+    width: 50%;
+  }
+  &__discription{
+    width: 62%;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    margin-top: 48px;
+  }
+  &__zigzac{
+    @include elementFlex(column, space-between, center);
+    position: absolute;
+    left: 50%;
+    bottom: 25%;
+    transform: translateX(-50%);
+  }
+  &__container{
+    width: 513px;
+    height: 569px;
+    justify-self: start;
+    grid-row: 1;
+    grid-column: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+  }
+  &__card1{
+    @include elementFlex(row, center, flex-start);
+    grid-row: 1 / 3;
+    grid-column: 1 / 3;
+    width: 513px;
+    height: 228px;
+    position: relative;
+    &__img{
+      align-self: center;
+      justify-self: center;
+      box-shadow: 0 4px 96px #d5dbe783;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+    }
+    &__icon{
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-image: url(../../images/crm/card-1-icon.png);
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translateY(-12px) translateX(-145px);
+    }
+    &__tag{
+      @include elementFlex(row, center, center);
+      width: 60px;
+      height: 24px;
+      border-radius: 999px;
+      background-color: $blueBgc;
+      font-size: 11px;
+      font-weight: 600;
+      color: $mainBlue;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transform: translateX(50%) translateY(128px);
+    }
+  }
+  &__noCard{
+    grid-row: 3;
+    grid-column: 1;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    &__icon{
+      position: absolute;
+      top: 24px;
+      right: 30px;
+    }
+    &__tag{
+      @extend .crm__card1__tag;
+      width: 84px;
+      height: 24px;
+      transform: initial;
+      top: 40px;
+      left: 20px;
+    }
+    &__img{
+      @extend .crm__card1__icon;
+      transform: initial;
+      top: initial;
+      left: 90px;
+      bottom: 0;
+      background-image: url(../../images/crm/no-card-icon.png);
+
+    }
+  }
+  &__card2{
+    @include elementFlex(row, center, flex-start);
+    grid-row: 3 / 5;
+    grid-column: 2;
+    width: 100%;
+    height: 100%;
+    margin-top: 36px;
+    position: relative;
+    &__img{
+      position: absolute;
+      right: 0;
+      top: 0;
+      box-shadow: 0 4px 96px #d5dbe783;
+    }
+  }
+  &__card3{
+    @include elementFlex(row, center, flex-start);
+    grid-row: 4 / 6;
+    grid-column: 1;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    &__img{
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      box-shadow: 0 4px 96px #d5dbe783;
+    }
+  }
+  &__lastTag{
+    grid-row: 5;
+    grid-column: 2;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    &__tag{
+      @extend .crm__card1__tag;
+      transform: initial;
+      right: initial;
+      top: 50%;
+      left: 0;
+      transform: translateX(-100%);
+    }
+  }
+  
+}
