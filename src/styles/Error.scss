@@ -3,4 +3,22 @@
 .error{
   width: 100%;
   min-height: 100vh;
+  padding: 185px 10% 100px 10%;
+  font-weight: 800;
+  font-size: 144px;
+  line-height: 196px;
+  position: relative;
+  &::before{
+    content: '';
+    width: 100%;
+    height: 30%;
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url(../images/home-wave-edge.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
 }
