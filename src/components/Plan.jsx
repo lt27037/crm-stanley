@@ -5,7 +5,7 @@ import Button from './Button';
 
 import '../styles/Plan.scss';
 
-const Plan = ({ plan }) => {
+const Plan = ({ plan, yearly }) => {
   const profits = plan.profits.map((profit) => <span className="plan__profits__text" key={profit}>{profit}</span>);
 
   return (
@@ -14,7 +14,7 @@ const Plan = ({ plan }) => {
       <div className="plan__profits">
         {profits}
       </div>
-      <span className="plan__price">{plan.price}</span>
+      <span className="plan__price">{yearly ? plan.price.year : plan.price.month}</span>
       <Button content="Wybierz plan" />
     </article>
   );
@@ -23,6 +23,7 @@ const Plan = ({ plan }) => {
 Plan.propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   plan: PropTypes.object.isRequired,
+  yearly: PropTypes.bool.isRequired,
 };
 
 export default Plan;

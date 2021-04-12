@@ -15,7 +15,10 @@ const plans = [
       'BEZ ZOBOWIĄZAŃ',
       'Dostęp do wszystkich funkcjonalności',
     ],
-    price: 'ZA DARMO',
+    price: {
+      month: 'ZA DARMO',
+      year: 'ZA DARMO',
+    }
   },
   {
     id: 1,
@@ -25,7 +28,10 @@ const plans = [
       'Rabat dla aktywnych do 50%',
       'Dostęp do wszystkich funkcjonalności',
     ],
-    price: '10PLN',
+    price: {
+      month: '10PLN',
+      year: '100PLN',
+    }
   },
   {
     id: 2,
@@ -37,7 +43,10 @@ const plans = [
       'Warsztaty z naszym konsultantem',
       'Dostęp do wszystkich funkcjonalności',
     ],
-    price: '50PLN',
+    price: {
+      month: '50PLN',
+      year: '490PLN',
+    }
   },
 ];
 
@@ -53,7 +62,7 @@ const Plans = () => {
     [location]
   );
 
-  const plansElements = plans.map((plan) => <Plan key={plan.id} plan={plan} />);
+  const plansElements = plans.map((plan) => <Plan key={plan.id} plan={plan} yearly={yearlyPlan} />);
 
   return (
     <section className="plans" ref={plansRef}>
