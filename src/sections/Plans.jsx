@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { ReactComponent as Info } from '../images/info-icon.svg';
+import { ReactComponent as Info } from '../images/information.svg';
 import PlanSwitch from '../components/PlanSwitch';
 import Plan from '../components/Plan';
 

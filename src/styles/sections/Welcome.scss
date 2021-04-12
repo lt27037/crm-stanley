@@ -3,15 +3,53 @@
 .welcome{
   width: 100%;
   min-height: 100vh;
-  padding: 0 10%;
+  padding: 190px 10% 135px 10%;
   display: grid;
-  column-gap: 10%;
-  grid-template-columns: 40% 50%;
+  grid-template-columns: 50% 50%;
   // background-color: $blueBgc;
   background-image: url(../../images/home-wave-edge.png);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: bottom;
+  &__arc{
+    position: absolute;
+    z-index: 15;
+  }
+  &__arc.arc--top{
+    top: 0;
+    right: 30%;
+  }
+  &__arc.arc--bottom{
+    bottom: 0;
+    left: 20%;
+  }
+  &__photoWrapper{
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 13% 13%;
+  }
+  &__picture{
+    position: absolute;
+  }
+  &__picture.picture--first{
+    top: 13%;
+    left: 13%;
+  }
+  &__picture.picture--second{
+    bottom: 13%;
+    right: 13%;
+  }
+  &__zigzacs{
+    @include elementFlex(column, center, center);
+    z-index: 10;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 100px;
+  }
   &__container{
     @include elementFlex(column, center, flex-start);
     width: 100%;
