@@ -1,0 +1,43 @@
+@import 'variables';
+
+.contactForm{
+  max-width: 480px;
+  @include elementFlex(row, space-between, flex-start);
+  flex-wrap: wrap ;
+  &::before{
+    content: '';
+    width: 100%;
+    height: 630px;
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url(../images/home-wave-edge.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  &__input{
+    font-size: 16px;
+    font-weight: 600;
+    padding: 16px 24px;
+    border: 1px solid $inputFontColor;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    width: 480px;
+  }
+  &__text{
+    @extend .contactForm__input;
+    height: 180px;
+    resize: none;
+    margin-bottom: 64px;
+  }
+  .input--area{
+    width: 80px;
+    margin-right: 24px;
+  }
+  .input--phone{
+    width: 370px;
+
+  }
+}
