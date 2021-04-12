@@ -1,0 +1,21 @@
+@import 'variables';
+
+.planSwitch{
+  width: 270px;
+  height: 52px;
+  border-radius: 8px;
+  border: 1px $mainBlue solid;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  &__button{
+    outline: none;
+    background: #fff;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  &__button.switch--on{
+    background: $mainBlue;
+    color: #fff;
+  }
+}

@@ -1,0 +1,124 @@
+@import '../variables';
+
+.symulations{
+  @include elementFlex(column, flex-start, flex-start);
+  width: 100%;
+  min-height: 100vh;
+  background-color: $blueBgc;
+  padding: 89px 10% 48px 10%;
+  position: relative;
+  &__container{
+    width: 60%;
+  }
+  &__title{
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 54px;
+    max-width: 400px;
+    margin-bottom: 48px;
+  }
+  &__slider{
+    &__item{
+      color: $mainBlue;
+    }
+    &__value{
+      font-size: 18px;
+      font-weight: 800;
+      line-height: 27px;
+    }
+    .MuiSlider-root{
+      margin: 20px 0;
+    }
+    .MuiSlider-rail{
+      color: #C3CDDF;
+    }
+    .MuiSlider-track{
+      color: $mainBlue;
+    }
+    .MuiSlider-thumb{
+      color: #fff;
+      border: 1px solid $mainBlue;
+      transform: scale(2);
+      box-shadow: 0 2px 4px #2668f542;
+    }
+  }
+  &__session{
+    @include elementFlex(column, flex-start, flex-start);
+    width: 100%;
+    &__title{
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 24px;
+    }
+    &__form{
+      width: 100%;
+      @include elementFlex(row, space-between, center)
+    }
+    &__label{
+      font-size: 16px;
+      font-weight: 600;
+      opacity: 0.8;
+    }
+    &__input{
+      opacity: 1;
+      margin-left: 15px;
+    }
+  }
+  &__companies{
+    width: 100%;
+    margin-top: 86px;
+    &__title{
+      font-size: 36px;
+      font-weight: 800;
+      line-height: 54px;
+      max-width: 500px;
+      margin-bottom: 48px;
+    }
+    &__wrapper{
+      @include elementFlex(row, space-between, center);
+      flex-flow: row wrap;
+      row-gap: 20px;
+      column-gap: 14px;
+      flex-basis: 20%;
+    }
+  }
+  &__profit{
+    @include elementFlex(column, flex-start, flex-start);
+    position: absolute;
+    right: 10%;
+    top: 89px;
+    width: 379px;
+    height: 392px;
+    background-color: $lightBgc;
+    border-radius: 8px;
+    padding: 24px;
+    &__title{
+      font-size: 18px;
+      font-weight: 800;
+    }
+    &__value{
+      font-weight: 800;
+      color: $mainBlue;
+      font-size: 36px;
+      line-height: 54px;
+      padding: 8px 0 24px 0;
+    }
+    &__grow{
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    &__percentage{
+      font-size: 18px;
+      font-weight: 800;
+      padding: 12px;
+      background-color: $ligthGreen;
+      border-radius: 8px;
+    }
+    .button{
+      position: absolute;
+      right: 24px;
+      bottom: 24px;
+    }
+  }
+}

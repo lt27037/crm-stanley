@@ -1,0 +1,39 @@
+@import '../variables';
+
+.plans{
+  @include elementFlex(column, flex-start, flex-start);
+  width: 100%;
+  min-height: 100vh;
+  padding: 148px 10%;
+  &__titleWrapper{
+    @include elementFlex(row, space-between, center);
+    width: 100%;
+  }
+  &__title{
+    font-size: 36px;
+    line-height: 54px;
+    font-weight: 800;
+    max-width: 500px;
+  }
+  &__container{
+    @include elementFlex(column, flex-start, flex-start);
+    width: 100%;
+    margin-top: 72px;
+  }
+  &__alert{
+    @include elementFlex(row, flex-start, flex-start);
+    width: 100%;
+    background: $lightBgc;
+    padding: 28px 17%;
+    &__text{
+      font-size: 16px;
+      font-weight: 600;
+      opacity: 0.8;
+    }
+    &__icon{
+      width: 18px;
+      height: 18px;
+      margin-right: 10px;
+    }
+  }
+}

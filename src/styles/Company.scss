@@ -1,0 +1,23 @@
+@import 'variables';
+
+.company{
+  @include elementFlex(column, center, center);
+  width: 100%;
+  max-width: 259px;
+  min-height: 150px;
+  background-color: $lightBgc;
+  border-radius: 8px;
+  justify-self: center;
+  &__title{
+    color: $mainBlue;
+    font-size: 16px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+  &__content{
+    font-size: 16px;
+    font-size: 600;
+    text-align: center;
+    padding: 8px 15%;
+  }
+}
