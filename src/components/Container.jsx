@@ -15,6 +15,18 @@ const Container = () => {
           <Home />
         </Route>
 
+        <Route path="/onas">
+          <Home />
+        </Route>
+
+        <Route path="/plany">
+          <Home />
+        </Route>
+
+        <Route path="/kalkulator">
+          <Home />
+        </Route>
+
         <Route path="/kontakt">
           <Contact />
         </Route>

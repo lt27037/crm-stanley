@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useLayoutEffect } from 'react';
 
 import ContactFrom from '../components/ContactForm';
 import { ReactComponent as Zigzac1 } from '../images/welcome/Vector 1.svg';
@@ -8,6 +8,13 @@ import map from '../images/contact/map.png';
 import '../styles/Contact.scss';
 
 const Contact = () => {
+  useLayoutEffect(
+    () => {
+      window.scrollTo(0, 0);
+    },
+    []
+  );
+
   return (
     <div className="contact">
       <span className="contact__zigzacs">

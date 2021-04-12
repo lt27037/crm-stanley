@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useLayoutEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 import Slider from '@material-ui/core/Slider';
 
 import Button from '../components/Button';
@@ -61,11 +62,20 @@ const companiesInfo = [
 
 const Symulations = () => {
   const [value, setValue] = useState(10000);
+  const location = useLocation();
+  const calculator = useRef(null);
+
+  useLayoutEffect(
+    () => {
+      if (location.pathname === '/kalkulator') calculator.current?.scrollIntoView();
+    },
+    [location]
+  );
 
   const companies = companiesInfo.map((company) => <Company key={company.id} company={company} />);
 
   return (
-    <section className="symulations">
+    <section className="symulations" ref={calculator}>
       <div className="symulations__container">
         <h2 className="symulations__title">Sprawdź nasze symulacje</h2>
         <div className="symulations__slider">
@@ -77,7 +87,6 @@ const Symulations = () => {
             PLN
           </span>
           <Slider
-            classes={{ label: 'symulations__slider__item' }}
             min={0}
             max={80000}
             step={1000}
@@ -91,7 +100,7 @@ const Symulations = () => {
           <form className="symulations__session__form">
             <label className="symulations__session__label" htmlFor="sesion">
               Ostatnia Sesja
-              <input type="checkbox" className="symulations__session__input" name="sesion" checked />
+              <input type="checkbox" className="symulations__session__input" name="sesion" />
             </label>
             <label className="symulations__session__label" htmlFor="sesion">
               Ostatni Tydzień

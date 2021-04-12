@@ -6,6 +6,7 @@
   margin-bottom: 72px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  column-gap: 35px;
   &__title{
     font-size: 18px;
     font-weight: 800;

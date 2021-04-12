@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useLayoutEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 
 import Button from '../components/Button';
 import { ReactComponent as Info } from '../images/information.svg';
@@ -12,8 +13,17 @@ import pictures2 from '../images/welcome/welcome-picture-2.png';
 import '../styles/sections/Welcome.scss';
 
 const Welcome = () => {
+  const location = useLocation();
+  const welcome = useRef(null);
+
+  useLayoutEffect(
+    () => {
+      if (location.pathname === '/') welcome.current?.scrollIntoView();
+    },
+    [location]
+  );
   return (
-    <section className="welcome">
+    <section className="welcome" ref={welcome}>
       <ArcTop className="welcome__arc arc--top" />
       <ArcBottom className="welcome__arc arc--bottom" />
       <div className="welcome__container">

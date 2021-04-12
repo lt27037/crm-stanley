@@ -20,7 +20,7 @@ const ContactForm = () => {
       <input
         type="text"
         className="contactForm__input input--area"
-        value="+48"
+        defaultValue="+48"
       />
       <input
         type="number"

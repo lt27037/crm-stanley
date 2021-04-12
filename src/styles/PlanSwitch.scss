@@ -2,7 +2,7 @@
 
 .planSwitch{
   width: 270px;
-  height: 52px;
+  height: 50px;
   border-radius: 8px;
   border: 1px $mainBlue solid;
   overflow: hidden;
@@ -13,6 +13,8 @@
     background: #fff;
     font-size: 16px;
     font-weight: 600;
+    height: 100%;
+    border-style: none;
   }
   &__button.switch--on{
     background: $mainBlue;

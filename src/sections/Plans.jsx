@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useLayoutEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 
 import { ReactComponent as Info } from '../images/information.svg';
 import PlanSwitch from '../components/PlanSwitch';
@@ -42,9 +43,20 @@ const plans = [
 
 const Plans = () => {
   const [yearlyPlan, setYearlyPlan] = useState(true);
+  const location = useLocation();
+  const plansRef = useRef(null);
+
+  useLayoutEffect(
+    () => {
+      if (location.pathname === '/plany') plansRef.current?.scrollIntoView();
+    },
+    [location]
+  );
+
   const plansElements = plans.map((plan) => <Plan key={plan.id} plan={plan} />);
+
   return (
-    <section className="plans">
+    <section className="plans" ref={plansRef}>
       <div className="plans__titleWrapper">
         <h2 className="plans__title">Wybierz odpowiedni plan dla siebie</h2>
         <PlanSwitch yearly={yearlyPlan} setYearly={setYearlyPlan} />

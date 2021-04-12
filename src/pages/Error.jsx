@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useLayoutEffect } from 'react';
 
 import '../styles/Error.scss';
 
 const Error = () => {
+  useLayoutEffect(
+    () => {
+      window.scrollTo(0, 0);
+    },
+    []
+  );
+
   return (
     <div className="error">
       <span className="error__number">404</span>
