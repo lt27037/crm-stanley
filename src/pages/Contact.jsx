@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from 'react';
+import React, { useEffect } from 'react';
 
 import ContactFrom from '../components/ContactForm';
 import { ReactComponent as Zigzac1 } from '../images/welcome/Vector 1.svg';
@@ -9,7 +9,7 @@ import '../styles/Contact.scss';
 
 // przewijanie do góry strony po zmianie lokalizacji w routingu
 const Contact = () => {
-  useLayoutEffect(
+  useEffect(
     () => {
       window.scrollTo(0, 0);
     },
