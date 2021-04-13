@@ -60,3 +60,17 @@
     padding: 150px 7%;
   }
 }
+
+@media(max-width: 786px){
+  .discover{
+    padding: 150px 5%;
+    grid-template-columns: 100%;
+    &__image{
+      display: none;
+    }
+    &__wrapper{
+      grid-template-columns: 100%;
+      row-gap: 24px;
+    }
+  }
+}

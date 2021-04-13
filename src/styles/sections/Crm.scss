@@ -168,3 +168,37 @@
     padding: 50px 7%;
   }
 }
+
+@media(max-width: 786px){
+  .crm{
+    padding: 50px 5% 150px 5%;
+    @include elementFlex(column-reverse, flex-end, flex-start);
+    min-height: 170vh;
+    position: relative;
+    &__container{
+      grid-column: initial;
+      grid-row: 1;
+      position: absolute;
+      left: 0;
+      bottom: 20vh;
+    }
+    &__wrapper {
+      grid-column: initial;
+      grid-row: 2;
+      height: 100vh;
+    }
+    &__title{
+      width: 100%;
+    }
+    &__discription{
+      width: 100%;
+    }
+    &__zigzac{
+      bottom: initial;
+      left: initial;
+      top: 0;
+      right: 0;
+      transform: translateY(-150%);
+    }
+  }
+}

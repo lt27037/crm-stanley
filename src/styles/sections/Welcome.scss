@@ -109,3 +109,47 @@
     }
   }
 }
+
+@media(max-width: 786px){
+  .welcome{
+    @include elementFlex(column, flex-start, flex-start);
+    padding: 130px 5% 100px 5%;
+    background-position: top;
+    background-size: 290%;
+    &__info{
+      margin: 20px 0 0 0;
+    }
+    &__container{
+      padding: 0;
+    }
+    &__title{
+      font-size: 50px;
+    }
+    &__photoWrapper{
+      padding: 0;
+      display: none;
+    }
+    &__picture.picture--first{
+      right: 300px;
+      bottom: 152px;
+    }
+    &__picture.picture--second{
+      bottom: 0;
+      right: 0;
+    }
+    &__zigzacs{
+      left: 62%;
+      transform: translateX(-50%);
+      bottom: 80px;
+    }
+    &__arc.arc--bottom{
+      bottom: 50px
+    }
+    &__wrapper{
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 100%;
+    }
+  }
+}

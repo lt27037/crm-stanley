@@ -93,6 +93,32 @@
 @media(max-width: 1800px){
   .feed{
     padding-left: 7%;
-    grid-template-columns: 40% 1fr;
+  }
+}
+
+@media(max-width: 786px){
+  .feed{
+    padding-left: 0;
+    grid-template-columns: 100%;
+    &__wrapper{
+      padding: 0 5%;
+    }
+    &__card{
+      margin: 0 auto;
+      &__tag,
+      &__button,
+      &__icon{
+        display: none;
+      }
+    }
+    &__container{
+      display: none;
+    }
+    &__elipse{
+      bottom: initial;
+      top: 0;
+      transform: translateY(-100%);
+      z-index: 1;
+    }
   }
 }
