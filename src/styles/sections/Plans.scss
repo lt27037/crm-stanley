@@ -37,3 +37,12 @@
     }
   }
 }
+
+@media(max-width: 1800px){
+  .plans{
+    padding: 148px 7%;
+    &__alert{
+      padding: 28px 12%;
+    }
+  }
+}

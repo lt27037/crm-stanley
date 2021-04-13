@@ -32,3 +32,9 @@
     margin: 0 0 auto auto;
   }
 }
+
+@media(max-width: 1800px){
+  .plan{
+    grid-template-columns: 1fr 25% 25% 25%;
+  }
+}

@@ -5,7 +5,7 @@
   min-height: 100vh;
   height: auto;
   display: grid;
-  grid-template-columns: 40% 50%;
+  grid-template-columns: 40% 1fr;
   column-gap: 100px;
   padding-left: 10%;
   padding-bottom: 148px;
@@ -87,5 +87,12 @@
       right: -120px;
       bottom: 40px;
     }
+  }
+}
+
+@media(max-width: 1800px){
+  .feed{
+    padding-left: 7%;
+    grid-template-columns: 40% 1fr;
   }
 }

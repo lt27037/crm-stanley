@@ -6,7 +6,6 @@
   padding: 190px 10% 135px 10%;
   display: grid;
   grid-template-columns: 50% 50%;
-  // background-color: $blueBgc;
   background-image: url(../../images/home-wave-edge.png);
   background-repeat: no-repeat;
   background-size: 100%;
@@ -35,8 +34,8 @@
     position: absolute;
   }
   &__picture.picture--first{
-    top: 13%;
-    left: 13%;
+    bottom: 152px;
+    right: 418px;
   }
   &__picture.picture--second{
     bottom: 13%;
@@ -82,6 +81,31 @@
       height: 20px;
       margin-right: 8px;
       opacity: initial;
+    }
+  }
+}
+
+@media(max-width: 1800px){
+  .welcome{
+    padding: 130px 7% 100px 7%;
+    &__photoWrapper{
+      padding: 0;
+    }
+    &__picture.picture--first{
+      right: 300px;
+      bottom: 152px;
+    }
+    &__picture.picture--second{
+      bottom: 0;
+      right: 0;
+    }
+    &__zigzacs{
+      left: 62%;
+      transform: translateX(-50%);
+      bottom: 80px;
+    }
+    &__arc.arc--bottom{
+      bottom: -10px
     }
   }
 }

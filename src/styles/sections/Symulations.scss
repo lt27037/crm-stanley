@@ -122,3 +122,12 @@
     }
   }
 }
+
+@media(max-width: 1800px){
+  .symulations{
+    padding: 89px 7% 48px 7%;
+    &__profit{
+      right: 7%;
+    }
+  }
+}
