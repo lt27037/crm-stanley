@@ -10,6 +10,8 @@ import '../styles/sections/Details.scss';
 const Details = () => {
   const location = useLocation();
   const about = useRef(null);
+
+  // funkcja scrollująca do sekcji po zmienie lokalizacji
   useLayoutEffect(
     () => {
       if (location.pathname === '/onas') about.current?.scrollIntoView();
@@ -17,6 +19,7 @@ const Details = () => {
     [location]
   );
 
+  // komponent z sekcją podzielony na dodatkowe 3 komponenty
   return (
     <section className="details" ref={about}>
       <Discover />

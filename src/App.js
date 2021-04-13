@@ -6,6 +6,8 @@ import Container from './components/Container';
 
 import './styles/App.scss';
 
+// Komponenty które przechowują całą zawartość
+
 const App = () => (
   <div className="app">
     <Header />

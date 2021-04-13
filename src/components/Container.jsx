@@ -7,6 +7,8 @@ import Error from '../pages/Error';
 
 import '../styles/Container.scss';
 
+// komponent zawierający routing
+
 const Container = () => {
   return (
     <div className="container">

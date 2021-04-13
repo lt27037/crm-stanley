@@ -65,6 +65,7 @@ const Symulations = () => {
   const location = useLocation();
   const calculator = useRef(null);
 
+  // funkcja scrollująca do sekcji po zmianie lokalizacji
   useLayoutEffect(
     () => {
       if (location.pathname === '/kalkulator') calculator.current?.scrollIntoView();
@@ -72,6 +73,7 @@ const Symulations = () => {
     [location]
   );
 
+  // Tworzenie komponentów na podstawie listy companiesInfo
   const companies = companiesInfo.map((company) => <Company key={company.id} company={company} />);
 
   return (
@@ -86,6 +88,7 @@ const Symulations = () => {
             {' '}
             PLN
           </span>
+          {/* Slider z material/ui pozwalający zmieniać wartość przesuwając elementem */}
           <Slider
             min={0}
             max={80000}

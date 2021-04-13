@@ -8,6 +8,8 @@ import Newsletter from '../sections/Newsletter';
 
 import '../styles/Home.scss';
 
+// container zawierający komponenty z sekcjami
+
 const Home = () => {
   return (
     <div>

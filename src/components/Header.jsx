@@ -9,6 +9,10 @@ import '../styles/Header.scss';
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+
+  // funkcja zamykająca okno menu na urządzeniach
+  // mobilnych w momencie zmieny lokalizacji
+
   useEffect(
     () => {
       setIsOpen(false);

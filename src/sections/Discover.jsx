@@ -67,6 +67,7 @@ const data = [
 ];
 
 const Discover = () => {
+  // tworzenie komponentów na podstawie listy data.
   const items = data.map((item) => <DiscoverItem key={item.id} item={item} />);
 
   return (

@@ -55,6 +55,7 @@ const Plans = () => {
   const location = useLocation();
   const plansRef = useRef(null);
 
+  // funkcja scrollująca do sekcji po zmianie lokalizacji
   useLayoutEffect(
     () => {
       if (location.pathname === '/plany') plansRef.current?.scrollIntoView();
@@ -62,6 +63,7 @@ const Plans = () => {
     [location]
   );
 
+  // Tworzenie komponentów na podstawie listy plans
   const plansElements = plans.map((plan) => <Plan key={plan.id} plan={plan} yearly={yearlyPlan} />);
 
   return (

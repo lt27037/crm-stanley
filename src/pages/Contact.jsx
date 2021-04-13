@@ -7,6 +7,7 @@ import map from '../images/contact/map.png';
 
 import '../styles/Contact.scss';
 
+// przewijanie do góry strony po zmianie lokalizacji w routingu
 const Contact = () => {
   useLayoutEffect(
     () => {

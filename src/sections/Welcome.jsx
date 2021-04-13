@@ -16,6 +16,7 @@ const Welcome = () => {
   const location = useLocation();
   const welcome = useRef(null);
 
+  // funkcja scrollująca do sekcji po zmianie lokalizacji
   useLayoutEffect(
     () => {
       if (location.pathname === '/') welcome.current?.scrollIntoView();
