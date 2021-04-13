@@ -11,19 +11,7 @@ const Container = () => {
   return (
     <div className="container">
       <Switch>
-        <Route path="/" exact>
-          <Home />
-        </Route>
-
-        <Route path="/onas">
-          <Home />
-        </Route>
-
-        <Route path="/plany">
-          <Home />
-        </Route>
-
-        <Route path="/kalkulator">
+        <Route path={['/', '/onas', '/plany', '/kalkulator']} exact>
           <Home />
         </Route>
 

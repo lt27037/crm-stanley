@@ -17,6 +17,9 @@
     width: auto;
     height: 100%;
   }
+  &__menuButton{
+    display: none;
+  }
   &__menu{
     margin-left: 5rem;
     &__list{
@@ -37,5 +40,50 @@
 @media(max-width: 1800px){
   .header{
     padding: 36px 7% 0 7%;
+  }
+}
+
+@media(max-width: 786px){
+  .header{
+    padding: 36px 5% 0 5%;
+    &__menu{
+      display: none;
+    }
+    &__wrapper.buttons--wrapper{
+      display: none;
+    }
+    &__menuButton{
+      display: flex;
+      width: 40px;
+      height: 40px;
+      background: transparent;
+      outline: none;
+      cursor: pointer;
+      position: relative;
+      &__span{
+        position: absolute;
+        width: 40px;
+        height: 5px;
+        background-color: $fontColor;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        &::before,
+        &::after{
+          content: '';
+          width: 40px;
+          height: 5px;
+          position: absolute;
+          left: 0;
+          background-color: $fontColor;
+        }
+        &::before{
+          top: -12px;
+        }
+        &::after{
+          bottom: -12px;
+        }
+      }
+    }
   }
 }

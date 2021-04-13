@@ -30,10 +30,13 @@ const Header = () => {
           </ul>
         </nav>
       </div>
-      <div className="header__wrapper">
+      <div className="header__wrapper buttons--wrapper">
         <Button content="Logowanie" secondary />
         <Button content="Zarejestruj się" />
       </div>
+      <button className="header__menuButton" type="button">
+        <span className="header__menuButton__span" />
+      </button>
     </header>
   );
 };
