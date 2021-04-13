@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/crm-stanley/static/css/main.1945aea0.chunk.css",
-    "main.js": "/crm-stanley/static/js/main.8b971283.chunk.js",
-    "main.js.map": "/crm-stanley/static/js/main.8b971283.chunk.js.map",
+    "main.js": "/crm-stanley/static/js/main.e9972ca7.chunk.js",
+    "main.js.map": "/crm-stanley/static/js/main.e9972ca7.chunk.js.map",
     "runtime-main.js": "/crm-stanley/static/js/runtime-main.3972b1a7.js",
     "runtime-main.js.map": "/crm-stanley/static/js/runtime-main.3972b1a7.js.map",
     "static/js/2.008ff756.chunk.js": "/crm-stanley/static/js/2.008ff756.chunk.js",
@@ -39,6 +39,6 @@
     "static/js/runtime-main.3972b1a7.js",
     "static/js/2.008ff756.chunk.js",
     "static/css/main.1945aea0.chunk.css",
-    "static/js/main.8b971283.chunk.js"
+    "static/js/main.e9972ca7.chunk.js"
   ]
 }
