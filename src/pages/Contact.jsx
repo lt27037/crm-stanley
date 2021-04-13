@@ -35,7 +35,11 @@ const Contact = () => {
           <span className="contact__section__content">POLSKA</span>
         </section>
         <div className="contact__map">
-          <img src={map} alt="mapa z lokalizacją biura" className="contact__map__img" />
+          <img
+            src={map}
+            alt="mapa z lokalizacją biura"
+            className="contact__map__img"
+          />
         </div>
       </div>
     </div>
