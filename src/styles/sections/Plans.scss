@@ -46,3 +46,32 @@
     }
   }
 }
+
+@media(max-width: 786px){
+  .plans{
+    padding: 100px 7%;
+    &__alert{
+      text-align: justify;
+      padding: 24px 40px;
+      position: relative;
+      &__icon{
+        width: 20px;
+        height: 20px;
+        margin: 0;
+        position: absolute;
+        left: 15px;
+        top: 24px;
+      }
+    }
+    &__titleWrapper{
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    &__title{
+      text-align: center;
+      margin-bottom: 24px;
+      font-size: 30px;
+      line-height: 40px;
+    }
+  }
+}

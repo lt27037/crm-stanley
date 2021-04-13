@@ -36,10 +36,12 @@
   &__picture.picture--first{
     bottom: 152px;
     right: 418px;
+    width: 276px;
   }
   &__picture.picture--second{
     bottom: 13%;
     right: 13%;
+    width: 173px;
   }
   &__zigzacs{
     @include elementFlex(column, center, center);
@@ -115,7 +117,7 @@
     @include elementFlex(column, flex-start, flex-start);
     padding: 130px 5% 100px 5%;
     background-position: top;
-    background-size: 290%;
+    background-size: cover;
     &__info{
       margin: 20px 0 0 0;
     }
@@ -124,18 +126,27 @@
     }
     &__title{
       font-size: 50px;
+      width: 100%;
+    }
+    &__discription{
+      width: 100%;
     }
     &__photoWrapper{
       padding: 0;
+      margin-top: 24px;
+    }
+    &__zigzacs{
       display: none;
     }
     &__picture.picture--first{
-      right: 300px;
-      bottom: 152px;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(50%);
+      z-index: 4;
+      position: relative;
     }
     &__picture.picture--second{
-      bottom: 0;
-      right: 0;
+      display: none;
     }
     &__zigzacs{
       left: 62%;
@@ -143,7 +154,7 @@
       bottom: 80px;
     }
     &__arc.arc--bottom{
-      bottom: 50px
+      display: none;
     }
     &__wrapper{
       flex-direction: column;

@@ -51,3 +51,23 @@
     padding: 150px 7%;
   }
 }
+
+@media(max-width: 786px){
+  .newsletter{
+    padding: 50px 5% 100px 5%;
+    @include elementFlex(column, flex-start, flex-start);
+    &__title{
+      margin: 0;
+    }
+    &__discription{
+      padding: 0;
+      margin: 40px 0;
+    }
+    &__form{
+      flex-direction: column;
+      .button{
+        margin: 24px auto;
+      }
+    }
+  }
+}

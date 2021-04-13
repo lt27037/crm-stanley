@@ -61,6 +61,8 @@
       top: 50%;
       left: 50%;
       transform: translateY(-50%) translateX(-50%);
+      width: 513px;
+      height: 228px;
     }
     &__icon{
       width: 24px;
@@ -111,8 +113,11 @@
       transform: initial;
       top: initial;
       left: 90px;
+      width: 24px;
+      height: 24px;
       bottom: 0;
       background-image: url(../../images/crm/no-card-icon.png);
+      background-size: contain;
 
     }
   }
@@ -129,6 +134,8 @@
       right: 0;
       top: 0;
       box-shadow: 0 4px 96px #d5dbe783;
+      width: 276px;
+      height: 215px;
     }
   }
   &__card3{
@@ -143,6 +150,8 @@
       left: 0;
       bottom: 0;
       box-shadow: 0 4px 96px #d5dbe783;
+      width: 173px;
+      height: 181px;
     }
   }
   &__lastTag{
