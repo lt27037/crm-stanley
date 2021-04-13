@@ -1,5 +1,5 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
 
 import Button from './Button';
 import { ReactComponent as Logo } from '../images/logo/logo-desktop.svg';
@@ -7,13 +7,22 @@ import { ReactComponent as Logo } from '../images/logo/logo-desktop.svg';
 import '../styles/Header.scss';
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+  useEffect(
+    () => {
+      setIsOpen(false);
+    },
+    [location]
+  );
+
   return (
     <header className="header">
       <div className="header__wrapper">
         <NavLink to="/">
           <Logo className="header__logo" />
         </NavLink>
-        <nav className="header__menu">
+        <nav className={isOpen ? 'header__menu menu--open' : 'header__menu'}>
           <ul className="header__menu__list">
             <li className="header__menu__listItem">
               <NavLink to="/onas">O nas</NavLink>
@@ -30,11 +39,11 @@ const Header = () => {
           </ul>
         </nav>
       </div>
-      <div className="header__wrapper buttons--wrapper">
+      <div className={isOpen ? 'header__wrapper buttons--wrapper --open' : 'header__wrapper buttons--wrapper'}>
         <Button content="Logowanie" secondary />
         <Button content="Zarejestruj się" />
       </div>
-      <button className="header__menuButton" type="button">
+      <button className="header__menuButton" type="button" onClick={() => setIsOpen(!isOpen)}>
         <span className="header__menuButton__span" />
       </button>
     </header>

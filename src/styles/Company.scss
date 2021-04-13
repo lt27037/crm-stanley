@@ -28,3 +28,23 @@
     height: 148px;
   }
 }
+
+@media(max-width: 1450px){
+  .company{
+    width: 200px;
+    height: 148px;
+    &__content{
+      padding: 8px 5%;
+    }
+  }
+}
+
+@media(max-width: 1250px){
+  .company{
+    width: 230px;
+    height: 148px;
+    &__content{
+      padding: 8px 15%;
+    }
+  }
+}

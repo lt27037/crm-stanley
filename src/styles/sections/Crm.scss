@@ -182,19 +182,19 @@
   .crm{
     padding: 50px 5% 150px 5%;
     @include elementFlex(column-reverse, flex-end, flex-start);
-    min-height: 170vh;
+    min-height: 100vh;
     position: relative;
     &__container{
       grid-column: initial;
       grid-row: 1;
-      position: absolute;
-      left: 0;
-      bottom: 20vh;
+      position: relative;
+      left: -7%;
     }
     &__wrapper {
       grid-column: initial;
       grid-row: 2;
-      height: 100vh;
+      height: auto;
+      margin-bottom: 50px;
     }
     &__title{
       width: 100%;
